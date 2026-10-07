@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Application | Gurdeep Singh</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="form-page">
+  <header class="nav">
+    <a class="brand" href="index.html">GURDEEP<span>FIT</span></a>
+    <a class="back" href="index.html">← Back to Home</a>
+  </header>
+
+  <main class="form-wrap">
+    <div class="form-intro">
+      <p class="eyebrow">PERSONAL TRAINING APPLICATION</p>
+      <h1>Tell me about <span>yourself.</span></h1>
+      <p>Share your details and fitness goal. Please provide accurate information so your coaching plan can be better personalized.</p>
+    </div>
+
+    <form id="clientForm">
+      <div class="form-section">
+        <h2>01. Basic Details</h2>
+        <div class="form-grid">
+          <label>Full Name *<input required name="name" type="text" placeholder="Your full name"></label>
+          <label>Age *<input required name="age" type="number" min="13" max="100" placeholder="e.g. 25"></label>
+          <label>Gender *
+            <select required name="gender">
+              <option value="">Select</option><option>Male</option><option>Female</option><option>Other</option>
+            </select>
+          </label>
+          <label>Phone Number *<input required name="phone" type="tel" placeholder="Your phone number"></label>
+          <label>Email<input name="email" type="email" placeholder="you@example.com"></label>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>02. Body & Goal</h2>
+        <div class="form-grid">
+          <label>Height (cm) *<input required name="height" type="number" step="0.1" placeholder="e.g. 175"></label>
+          <label>Current Weight (kg) *<input required name="weight" type="number" step="0.1" placeholder="e.g. 82"></label>
+          <label>Target Weight (kg)<input name="targetWeight" type="number" step="0.1" placeholder="e.g. 72"></label>
+          <label>Fitness Goal *
+            <select required name="goal">
+              <option value="">Select your main goal</option>
+              <option>Fat Loss</option><option>Body Transformation</option>
+              <option>Muscle Gain</option><option>Body Recomposition</option><option>Strength & Fitness</option>
+            </select>
+          </label>
+          <label>Current Activity Level
+            <select name="activity">
+              <option value="">Select</option><option>Beginner / Low Activity</option>
+              <option>Moderately Active</option><option>Very Active</option><option>Highly Active</option>
+            </select>
+          </label>
+          <label>Training Experience
+            <select name="experience">
+              <option value="">Select</option><option>Beginner</option><option>Less than 1 year</option>
+              <option>1–2 years</option><option>2+ years</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>03. Lifestyle & Preferences</h2>
+        <div class="form-grid">
+          <label>Workout Days / Week
+            <select name="days"><option value="">Select</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select>
+          </label>
+          <label>Diet Preference
+            <select name="diet"><option value="">Select</option><option>Vegetarian</option><option>Non-Vegetarian</option><option>Vegan</option><option>Other</option></select>
+          </label>
+          <label>Preferred Training Mode
+            <select name="mode"><option value="">Select</option><option>In-Person</option><option>Online</option><option>Both</option></select>
+          </label>
+          <label>How did you hear about me?<input name="source" type="text" placeholder="Instagram, friend, gym, etc."></label>
+        </div>
+        <label class="full">Anything else I should know?
+          <textarea name="notes" rows="5" placeholder="Tell me about your routine, challenges, target date, previous attempts, etc."></textarea>
+        </label>
+      </div>
+
+      <div class="consent">
+        <label><input required type="checkbox"> I confirm that the information I provided is accurate and I agree to be contacted regarding personal training.</label>
+      </div>
+
+      <button class="btn primary submit" type="submit">Submit Application →</button>
+      <div id="success" class="success" hidden>
+        <h3>Application saved on this device ✓</h3>
+        <p>Your details have been collected. For real client submissions to reach you automatically, connect this form to a backend/form service before publishing.</p>
+      </div>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
